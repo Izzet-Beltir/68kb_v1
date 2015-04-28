@@ -46,7 +46,7 @@ $db['default']['dbcollat'] = "utf8_general_ci";
 */
 //$config['base_url']	= "http://localhost/";
 $config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
-$config['base_url'] .= preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME'])).'/';
+$config['base_url'] .= preg_replace('@/+$@','',str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME']))).'/';
 
 /*
 |--------------------------------------------------------------------------
